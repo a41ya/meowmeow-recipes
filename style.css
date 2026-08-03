@@ -1,0 +1,75 @@
+:root {
+  
+}
+
+body {
+  margin: 0;
+  padding: 0;
+
+  min-height: 100vh;
+
+  background-image: url(./images/home-bg.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  
+
+  font-family: 'Cherry Bomb One', sans-serif;
+}
+
+.logo {
+  color: #ffc1c6;
+  -webkit-text-stroke: 0.1px #ed8fa3ab;
+  font-size: 88px;
+  text-align: center;
+  margin: 0 0 80px 0;
+  padding: 0;
+
+  line-height: 0.7;
+  text-transform: uppercase;
+}
+
+.logo span {
+  font-size: 40px;
+  -webkit-text-stroke: 1.3px #ed8fa3ba;
+}
+
+.button {
+  padding: 16px 48px;
+  background: linear-gradient(to bottom right, #ffd9dc,#f9c5c9);
+  
+  border-radius: 40px;
+  border: 2px solid transparent;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.button:hover {
+  background: 
+    linear-gradient(#ffeef0, #ffeef0) padding-box, 
+    linear-gradient(to bottom right, #ffb3ba, #f79aa2) border-box;
+  
+  color: #dc4a6a;
+}
+
+nav {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+a {
+  text-decoration: none;
+  -webkit-text-stroke: 0.5px white;
+  font-size: 26px;
+  color: #f1849cdb;
+}
