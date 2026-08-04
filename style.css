@@ -1,7 +1,4 @@
-:root {
-  
-}
-
+/* base */
 body {
   margin: 0;
   padding: 0;
@@ -18,58 +15,107 @@ body {
   justify-content: center;
   align-items: center;
 
-  
-
-  font-family: 'Cherry Bomb One', sans-serif;
+  font-family: "Cherry Bomb One", sans-serif;
 }
 
+/* logo */
 .logo {
   color: #ffc1c6;
   -webkit-text-stroke: 0.1px #ed8fa3ab;
   font-size: 88px;
   text-align: center;
-  margin: 0 0 80px 0;
+  margin-bottom: 80px;
   padding: 0;
 
   line-height: 0.7;
   text-transform: uppercase;
+  
+  transition: transform .3s ease;
+}
+
+.logo:hover {
+  transform: scale(1.06);
 }
 
 .logo span {
   font-size: 40px;
   -webkit-text-stroke: 1.3px #ed8fa3ba;
+
+  display: inline-block;
+  animation: float 3s ease-in-out infinite;
 }
 
+/* logo animation */
+@keyframes float {
+  0%,100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-4px);
+  }
+}
+
+/* buttons */
 .button {
+  text-decoration: none;
+  text-shadow: 0 1px 2px rgba(255,255,255,.6);
+  font-size: 26px;
+  color: #f1849cdb;
   padding: 16px 48px;
   background: linear-gradient(to bottom right, #ffd9dc,#f9c5c9);
   
   border-radius: 40px;
   border: 2px solid transparent;
+  box-shadow: 0 4px 10px rgba(198, 56, 92, 0.10);
 
   display: flex;
   justify-content: center;
   align-items: center;
 
+  transition: transform 0.2s ease,
+              box-shadow 0.2s ease,
+              color 0.2s ease,
+              background 0.2s ease;
+
+  cursor: url(./images/paw-cursor.png), pointer;  
 }
 
 .button:hover {
   background: 
     linear-gradient(#ffeef0, #ffeef0) padding-box, 
     linear-gradient(to bottom right, #ffb3ba, #f79aa2) border-box;
-  
   color: #dc4a6a;
+
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 10px 20px rgba(198, 56, 92, 0.15);
 }
 
-nav {
+/* another version of active state, just playing with colors*/
+
+/*.button:active {
+  background: 
+    linear-gradient(#ffeef0, #ffeef0) padding-box, 
+    linear-gradient(to bottom right, #fcc4ca, #fbcace) border-box;
+  color: #fbfbfb;
+
+  transform: scale(0.97);
+}*/
+
+.button:active {
+  background:
+    linear-gradient(#ffd7dc, #ffd7dc) padding-box,
+    linear-gradient(to top left, #f79aa2, #ffb3ba) border-box;
+
+  color: #c54d68;
+
+  transform: translateY(1px) scale(0.98);
+  box-shadow: 0 3px 8px rgba(198, 56, 92, 0.18);
+}
+
+/* navigation */
+.recipes {
   display: flex;
   flex-direction: column;
   gap: 16px;
-}
-
-a {
-  text-decoration: none;
-  -webkit-text-stroke: 0.5px white;
-  font-size: 26px;
-  color: #f1849cdb;
 }
