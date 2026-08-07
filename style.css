@@ -124,9 +124,28 @@ body {
 }
 
 /*burger base*/
+.burger {
+  background-image: url(../images/cheeseburger-bg.png);
 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  margin: 20px;
+  gap: 8px;
+}
 
 /*tiramisu base*/
+.tiramisu {
+  background-image: url(../images/tiramisu-bg.png);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  margin: 20px;
+  gap: 8px;
+}
 
 
 .header {
@@ -229,6 +248,14 @@ li {
   align-self: flex-start;
   margin: 48px;
 }
+.burger > .button {
+  align-self: flex-start;
+  margin: 48px;
+}
+.tiramisu > .button {
+  align-self: flex-start;
+  margin: 48px;
+}
 
 .header > .logo {
   max-width: 800px;
@@ -247,8 +274,8 @@ li {
 }
 .hint {
   position: absolute;
-  bottom: 20px;
-  right: 430px;
+  bottom: 0;
+  right: 0;
   position: relative;
   font-size: 20px;
   color: #e795a7;
