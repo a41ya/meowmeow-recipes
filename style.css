@@ -24,6 +24,7 @@ body {
 .logo {
   color: #ffc1c6;
   -webkit-text-stroke: 0.1px #ed8fa3ab;
+  text-shadow: 0 1px 1px #c54d68;
   font-size: 88px;
   text-align: center;
   margin-bottom: 80px;
@@ -63,6 +64,7 @@ body {
   color: #f1849cdb;
   text-decoration: none;
   text-shadow: 0 1px 2px rgba(255,255,255,.6);
+  text-align: center;
   
   padding: 16px 48px;
   border: 2px solid transparent;
@@ -113,7 +115,7 @@ body {
 
 /*lasagna base*/
 .lasagna {
-  background-image: url(../images/lasagna-bg.png);
+  background-image: url(./images/lasagna-bg.png);
 
   display: flex;
   flex-direction: column;
@@ -125,7 +127,7 @@ body {
 
 /*burger base*/
 .burger {
-  background-image: url(../images/cheeseburger-bg.png);
+  background-image: url(./images/cheeseburger-bg.png);
 
   display: flex;
   flex-direction: column;
@@ -137,7 +139,7 @@ body {
 
 /*tiramisu base*/
 .tiramisu {
-  background-image: url(../images/tiramisu-bg.png);
+  background-image: url(./images/tiramisu-bg.png);
 
   display: flex;
   flex-direction: column;
@@ -173,7 +175,7 @@ body {
   max-width: 600px;
   padding: 24px 30px;
 
-  color: #ec8ea2;
+  color: #c16b7d;
   font-family: "Nunito", sans-serif;
   font-style: italic;
   font-weight: 800;
@@ -273,30 +275,41 @@ li {
   padding: 16px;
 }
 .hint {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  position: relative;
+  position: fixed;
+  top: 24px;
+  right: 24px;
+
   font-size: 20px;
   color: #e795a7;
   background-color: #ffd9da;
   border-radius: 30px;
   padding: 5px 14px;
+
   cursor: url(./images/paw-cursor.png), pointer; 
-  transition: scale 0.2s ease;
+  transition: transform 0.2s ease;
 }
 
 .hint > .paragraph {
   position: absolute;
-  left: 100%;
-  top: 0;
+
+  right: 0;
+  top: 100%;
+  min-width: 250px;
+  max-width: 300px;
+
+  transform: translateY(-5px);
+
+  transition:
+    opacity 0.2s ease, 
+    transform 0.2s ease;
   font-size: 18px;
 }
 
 .hint:hover > .paragraph {
   opacity: 1;
+  transform: translateY(0);
 }
 
 .hint:hover {
-  scale: 1.1;
+  transform: scale(1.1);
 }
