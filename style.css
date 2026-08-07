@@ -2,20 +2,22 @@
 body {
   margin: 0;
   padding: 0;
-
   min-height: 100vh;
 
-  background-image: url(./images/home-bg.png);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 
+  font-family: "Cherry Bomb One", sans-serif;
+}
+
+.home {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 
-  font-family: "Cherry Bomb One", sans-serif;
+  background-image: url(./images/home-bg.png);
 }
 
 /* logo */
@@ -25,7 +27,6 @@ body {
   font-size: 88px;
   text-align: center;
   margin-bottom: 80px;
-  padding: 0;
 
   line-height: 0.7;
   text-transform: uppercase;
@@ -58,15 +59,16 @@ body {
 
 /* buttons */
 .button {
-  text-decoration: none;
-  text-shadow: 0 1px 2px rgba(255,255,255,.6);
   font-size: 26px;
   color: #f1849cdb;
-  padding: 16px 48px;
-  background: linear-gradient(to bottom right, #ffd9dc,#f9c5c9);
+  text-decoration: none;
+  text-shadow: 0 1px 2px rgba(255,255,255,.6);
   
-  border-radius: 40px;
+  padding: 16px 48px;
   border: 2px solid transparent;
+  border-radius: 40px;
+
+  background: linear-gradient(to bottom right, #ffd9dc,#f9c5c9);
   box-shadow: 0 4px 10px rgba(198, 56, 92, 0.10);
 
   display: flex;
@@ -91,17 +93,6 @@ body {
   box-shadow: 0 10px 20px rgba(198, 56, 92, 0.15);
 }
 
-/* another version of active state, just playing with colors*/
-
-/*.button:active {
-  background: 
-    linear-gradient(#ffeef0, #ffeef0) padding-box, 
-    linear-gradient(to bottom right, #fcc4ca, #fbcace) border-box;
-  color: #fbfbfb;
-
-  transform: scale(0.97);
-}*/
-
 .button:active {
   background:
     linear-gradient(#ffd7dc, #ffd7dc) padding-box,
@@ -118,4 +109,167 @@ body {
   display: flex;
   flex-direction: column;
   gap: 16px;
+}
+
+/*lasagna base*/
+.lasagna {
+  background-image: url(../images/lasagna-bg.png);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  margin: 20px;
+  gap: 8px;
+}
+
+/*burger base*/
+
+
+/*tiramisu base*/
+
+
+.header {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 24px;
+  margin-top: 80px;
+  margin-left: 48px;
+
+  position: relative;
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-width:500px;
+}
+
+.paragraph {
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  min-width: 400px;
+  max-width: 600px;
+  padding: 24px 30px;
+
+  color: #ec8ea2;
+  font-family: "Nunito", sans-serif;
+  font-style: italic;
+  font-weight: 800;
+  line-height: 1.4;
+
+  background: rgba(255, 240, 242, 0.18);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-radius: 30px;
+
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+
+  box-shadow:
+    0 8px 30px rgba(198, 56, 92, 0.08),
+    inset 0 1px 1px rgba(255, 255, 255, 0.4);
+
+  text-shadow:
+    0 1px 4px rgb(245, 243, 243);
+  
+}
+
+.content {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  gap: 32px;
+
+  font-family: "Nunito",sans-serif;
+
+  align-self: flex-start;
+  margin-left: 48px;
+  margin-top: 32px;
+}
+
+h2 {
+  text-align: center;
+  color: #f1849cdb;
+
+  text-transform: uppercase;
+  text-decoration: none;
+  text-shadow: 0 1px 2px rgba(255,255,255,.6);
+  
+  padding: 4px 8px;
+  border: 2px solid transparent;
+  border-radius: 40px;
+
+  background: linear-gradient(to bottom right, #ffd9dc,#f9c5c9);
+  box-shadow: 0 4px 10px rgba(198, 56, 92, 0.10);
+}
+
+.steps {
+  width: fit-content;
+  height: fit-content;
+  max-width: 600px;
+}
+
+.ingredients {
+  width: fit-content;
+  max-width: 300px;
+}
+
+.ingredients ul{
+ list-style-image: url(./images/heart-icon.svg);
+}
+
+li {
+  line-height: 2;
+  font-size: 16px;
+}
+
+.lasagna > .button {
+  align-self: flex-start;
+  margin: 48px;
+}
+
+.header > .logo {
+  max-width: 800px;
+  text-shadow: 0 1px 1px #c54d68;
+  margin: 0;
+  line-height: 0.9;
+  text-align: left;
+}
+
+.steps, .ingredients {
+  background: rgba(252, 242, 242, 0.957);
+  color: #6c595d;
+  border: 2px solid #f6d8de;
+  border-radius: 30px;
+  padding: 16px;
+}
+.hint {
+  position: absolute;
+  bottom: 20px;
+  right: 430px;
+  position: relative;
+  font-size: 20px;
+  color: #e795a7;
+  background-color: #ffd9da;
+  border-radius: 30px;
+  padding: 5px 14px;
+  cursor: url(./images/paw-cursor.png), pointer; 
+  transition: scale 0.2s ease;
+}
+
+.hint > .paragraph {
+  position: absolute;
+  left: 100%;
+  top: 0;
+  font-size: 18px;
+}
+
+.hint:hover > .paragraph {
+  opacity: 1;
+}
+
+.hint:hover {
+  scale: 1.1;
 }
